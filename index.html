@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Algoritmeregister</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="images/algoritmeregister-logo.svg" alt="algoritmeregister logo">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#" class="actived">Overzicht</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><button><img src="images/Netherlands.png" alt="Netherlands vlag"></button></li>
+            </ul>
+        </nav>    
+        <article>
+            <h1>Overzicht</h1>
+            <p>Op de overzichtspagina vind je een lijst van verschillende algoritmes, deze kun je filteren op thema.</p>
+        </article> 
+    </header>
+
+    <main>
+        <section>
+            <h2 class="filtertitel">Filteren op thema </h2>
+            <div>
+                <input aria-label="zoekveld" type="text" placeholder="Wat zoek je?">
+                <button><img src="images/search.png" alt="zoek-knop" ></button>
+                <button><img src="images/stripe-list-icon.png" alt="table view knop "></button>
+                <img src="images/speaker.png" alt="speaker icon">
+                
+                <select name="filter">
+                    <option value="organisatie">organisatie</option>
+                    <option value="Gemeente Amsterdam">Gemeente Amsterdam</option>
+                    <option value="Gemeente Den Haag">Gemeente Den haag</option>
+                </select>
+                
+                <select name="filter">
+                    <option value="">willekeurig</option>
+                    <option value="optie">Nieuwste</option>
+                    <option value="optie">recent bijgewerkt</option>
+                    <option value="optie">Meeste risico’s</option>
+                </select>
+            </div>
+        </section>
+        <section class="filterOptions">
+            <button>Natuur</button>
+            <button>Financien</button>
+            <button>Integratie</button>
+            <button>Recht</button>
+            <button>Sociale Zekerheid</button>
+            <button>Gezondheid</button>
+            <button>Verkeer</button>
+            <button>Cultuur</button>
+            <button>Huisvesting</button>
+            <button>Bestuur</button>
+            <button>Economie</button>
+            <button>Landbouw</button>
+            <button>Onderwijs</button>
+            <button>Infrastructuur</button>
+            <button>Werk</button>
+            <button>Openbare orde</button>
+        </section>
+
+        <ul class="bloklist"></ul>
+        <table class="tablelist"></table>
+
+        <div class="pagination"> </div> 
+        <span></span>
+
+        <button class="chatbot"><img src="images/simple-hipchat.png" alt = "chatbot knop"></button>
+        <section class="chatbot-box">
+            <p>Meest gestelde vragen </p>
+            <p>Waar kan ik je mee helpen?</p>
+            <p>13:42 PM</p>
+
+            <dl>
+                <dt class="vraag">Wat is een algoritmeregister?</dt>
+                    <dd class="closedslid">Het algoritmeregister is een overzicht 
+                        van de algoritmes die de gemeenten bij 
+                        gemeentelijke dienstverlening. 
+                        Een algoritme is een vooraf bepa alde set 
+                        regels of stappen die door de computer gevolgd worden. 
+                        Per algoritme vindt u eerst algemene informatie over de 
+                        bedoeling en werking van het algoritme.</dd>
+
+                <dt class="vraag">Waar word al mijn data opgeslagen? </dt>
+                    <dd class="closedslid">Het algoritmeregister is een overzicht 
+                        van de algoritmes die de gemeenten bij 
+                        gemeentelijke dienstverlening. </dd>
+
+                <dt class="vraag">Krijg ik te zien waar algoritmes voor worden gebruikt? </dt>
+                    <dd class="closedslid">Het algoritmeregister is een overzicht 
+                        van de algoritmes die de gemeenten bij 
+                        gemeentelijke dienstverlening. </dd>
+
+                <dt class="vraag">Hoe kan ik up-to-date blijven over nieuwe algoritmes? </dt>
+                    <dd class="closedslid">Het algoritmeregister is een overzicht 
+                        van de algoritmes die de gemeenten bij 
+                        gemeentelijke dienstverlening. </dd>
+
+                <dt class="vraag">Hoelang word data bewaard?</dt>
+                    <dd class="closedslid">Het algoritmeregister is een overzicht 
+                        van de algoritmes die de gemeenten bij 
+                        gemeentelijke dienstverlening. </dd>
+            </dl>
+
+            <div>
+                <input aria-label="berichtveld" type="text" placeholder="Stel uw vraag ...">
+                <button aria-label="send"></button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2022 - ALGORITMEREGISTER</p> 
+    </footer>
+
+    
+    <script src="js/script.js"></script>
+    <script src="js/ajaxscript.js"></script>
+</body>
+</html>

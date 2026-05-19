@@ -1,0 +1,1740 @@
+/* Snelle toegang door het gewenste titel te kopiëren en er direct naar te zoeken */
+
+/******************* Body stylen *******************/
+/* Navigation-bar */
+/* header stylen */
+/* footer stylen */
+
+/******************* algemeen stylen *******************/
+/* pagination / page nummer */
+/* main div first section */
+/* Thema filter */
+/* thema note hover in de index en details pagina */
+
+
+/************* main stylen Bolkjes view ************/
+
+/************ main stylen table view ***************/
+
+/*************** detail-pagina stylen *****************/
+/* Dataverwerking */
+/* Data */
+/* contactgegevens */
+/* feedback form */
+/* Thema's subjects icon classen */
+/* subjects */
+/* Tabs */
+ /* Popup */
+
+/******************* Chatbot stylen *******************/
+/* Chatbot icon */
+/* Open chatbot */
+/* De vragen list */
+/* input position */
+
+/* *********************************************************** */
+/* *********************************************************** */
+
+/* De code  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    caret-color: transparent;
+
+}
+
+:root{
+    --background-color:#ffffff;
+    --font-color: #000000;
+    --hoofd-color: #4D80E2;
+    --secondary-color:  #f4faff;
+    --grey-color: #676968;
+    --licht-grey-color: #e2e2e2;
+    /*  de ::after werkt niet met de var() voor kleuren, dus heb ik de hashtag kleuren gebruikt voor de ::after. */
+
+    /* thema's colors */
+    --thema-Natuur:#DCE6BB;
+    --thema-Financien:#867275;
+    --thema-Integratie:#B5C5DF;
+    --thema-openbare-orde:#ACECA1;
+    --thema-Sociale-zekerheid:#688B58;
+    --thema-Gezondheid:#8B4D57;
+    --thema-Cultuur:#FBBE96;
+    --thema-Huisvesting:#F5A26B;
+    --thema-Bestuur:#4C6663;
+    --thema-Recht:#49101C;
+    --thema-Verkeer:#B3679B;
+    --thema-Economie:#8B4D57;
+    --thema-Landbouw:#76881C;
+    --thema-Onderwijs:#FDB07E;
+    --thema-Infrastructuur:#D7907B;
+    --thema-Werk:#6C4A5E;
+}
+
+
+/* ************************************************** */
+/******************* Body stylen *******************/
+/* ************************************************** */
+
+body {
+    font-family: 'Noto Sans SC', Helvetica, arial, sans-serif;
+    min-height: 100vh;
+    background-image: linear-gradient(var(--background-color) 25em, var(--secondary-color) 20em);
+    background-size: 100% 50em;
+    position: relative;
+} 
+
+.lijstbackground{
+    background-image: none;
+}
+
+main {
+    padding-bottom: 5em;
+}
+
+/* Navigation-bar */
+
+header nav{
+    height: 4.4em;
+    width: 100%;
+    text-align:center;
+    background-color: var(--secondary-color);
+
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav>img{
+    float: left;
+    width: 15.6em;
+    padding: 1.2em .6em .6em 4em;
+}
+
+header nav ul{
+    padding: 0 4.4em 0 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+header nav ul li a{
+    color: var(--font-color);
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    line-height: 4.4em;
+    padding: .3em 1em;
+}
+
+header nav ul li a.actived{
+    font-weight: bold;
+}
+
+header nav ul li button{
+    border: none;
+    background-color: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+header nav ul li button img{
+    width: 2em;
+    height: 1.6em;
+    border-radius: .2em;
+    display: block;
+}
+
+
+/* header stylen */
+header article {
+    padding: 1.2em 4.4em 2.5em 4.4em;
+    background-color: var(--secondary-color);
+}
+
+header article h1{
+    font-weight: lighter;
+    margin: 1em 0;
+}
+
+/* footer stylen */
+footer {
+    position: absolute;
+    height: 3.5em;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--secondary-color);
+    color: var(--font-color);
+    text-align: center;
+    padding: 1.3em;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+/* ************************************************** */
+/******************* algemeen stylen *******************/
+/* ************************************************** */
+
+
+/* pagination / page nummer */
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.2em;
+    margin-bottom: 1.2em;
+    left: 0;
+    right: 0;
+
+}
+
+  .pagination button {
+    padding: .4em .5em;
+    border: none;
+    background-color: transparent ;
+    border-radius: .3em;
+    cursor: pointer;
+  }
+
+  .pagination button.active {
+    background-color: var(--hoofd-color);
+    color: var(--background-color);
+    border-radius: .3em;
+  }
+  
+
+  .pagination button:hover:not(.active) {
+    background-color: var(--secondary-color);
+    border-radius: .3em;
+    color: var(--font-color);
+  }
+
+.pagination p{
+    position: absolute;
+    right: 4em;
+}
+
+
+
+
+/* main div first section */
+
+main section:first-of-type {
+    position: relative;
+    right: 0;
+    padding: 1.2em 4.4em 0 4.4em;
+    width: 100%;
+    text-align: center;
+    margin: .9em 0 1em 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline; 
+    flex-wrap: wrap;
+}
+
+main section div:first-of-type{
+    margin: 0;
+    padding: 0;
+    width: 25em;
+    min-width: 15em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+main section:first-of-type h2{
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+main section:first-of-type h2::after{
+    content: ">";
+    display: inline-block;
+    transform: rotate(90deg);
+}
+
+main section:first-of-type h2.closemenu::after{
+    transform: rotate(-90deg);
+}
+
+main section:first-of-type div{
+    width: 26em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+main section:first-of-type div>img{
+    width: 1.6em;
+    order: 4;
+}
+
+main section:first-of-type div button:first-of-type img {
+    width: 1.1em;
+    filter: invert(100%) sepia(0%) saturate(1833%) hue-rotate(316deg) brightness(110%) contrast(100%);
+    margin: 0;
+}
+
+main section:first-of-type div button:nth-of-type(2){
+    order: 2;
+    cursor: pointer;
+    border: 0;
+    background-color: none;
+}
+
+main section:first-of-type div button:nth-of-type(2) img{
+    width: 1.6em;
+    float: right;
+    filter: invert(48%) sepia(90%) saturate(2077%) hue-rotate(201deg) brightness(92%) contrast(93%);
+}
+
+main section:first-of-type div select {
+    border-radius: .3em;
+    border: .1em solid var(--hoofd-color);
+    padding: .1em;
+}
+
+main section:first-of-type div select:nth-of-type(2){
+    order: 1;
+}
+
+
+main section:first-of-type div button:first-of-type{
+    width: 1.7em;
+    height: 1.7em;
+    background-color: var(--hoofd-color);
+    border: none;
+    border-radius: .4em;
+    padding-top: .3em;
+    cursor: pointer;
+    z-index: 1;
+    order: 3;
+}
+
+main section:first-of-type div input{
+    position: absolute;
+    left: 13em;
+    border: var(--hoofd-color) solid .1em;
+    border-radius: .4em 0 0 .4em;
+    height: 1.7em;
+    width: 14.5em;
+    opacity: 0;
+    z-index: -1;
+    box-shadow: inset var(--grey-color) 0 0 .2em;
+
+    transition: .2s;
+}
+
+.detail-page section:first-of-type div input{
+    left: -10em;
+    opacity: 0;
+    z-index: -1;
+}
+
+.detail-page section:first-of-type div input.opensearchDP{
+    opacity: 1;
+    z-index: 1;
+}
+
+main section:first-of-type div input.opensearch{
+    opacity: 1;
+    z-index: 1;
+}
+
+.detail-page section:first-of-type div input,
+main section:first-of-type div input[type="text"]{
+    color: var(--grey-color);
+    padding: .3em;
+}
+
+
+
+/* Thema filter */
+
+.filterOptions{
+    display: none;
+    padding: 0 4.4em;
+    margin: 0;
+}
+
+.openfilter{
+    display: flex;
+    height: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap:1.5em;
+}
+
+.filterOptions button{
+    border: none;
+    background-color: var(--secondary-color);
+    color: var(--font-color);
+    border-radius: .3em;
+    height: 3em;
+    width: 9.7em;
+    padding: 0;
+
+    cursor: pointer;
+    box-shadow: var(--licht-grey-color) 0 .15em .2em ;
+}
+
+.filterOptions button:active{
+    transform: scale(.9);
+}
+
+    .filterOptions button:first-of-type.activated,
+    .filterOptions button:first-of-type:hover{
+        background-color:var(--thema-Natuur);
+    }
+
+    .filterOptions button:nth-of-type(2).activated,
+    .filterOptions button:nth-of-type(2):hover{
+        background-color:var(--thema-Financien);
+        color: var(--background-color);
+    }
+
+    .filterOptions button:nth-of-type(3).activated,
+    .filterOptions button:nth-of-type(3):hover{
+        background-color:var(--thema-Integratie);
+    }
+
+    .filterOptions button:nth-of-type(4).activated,
+    .filterOptions button:nth-of-type(4):hover{
+        background-color:var(--thema-Recht);
+        color: var(--background-color);
+    }
+
+    .filterOptions button:nth-of-type(5).activated,
+    .filterOptions button:nth-of-type(5):hover{
+        background-color:var(--thema-Sociale-zekerheid);
+    }
+
+    .filterOptions button:nth-of-type(6).activated,
+    .filterOptions button:nth-of-type(6):hover{
+        background-color:var(--thema-Gezondheid);
+        color: var(--background-color);
+    }
+
+    .filterOptions button:nth-of-type(7).activated,
+    .filterOptions button:nth-of-type(7):hover{
+        background-color:var(--thema-Verkeer);
+    }
+
+    .filterOptions button:nth-of-type(8).activated,
+    .filterOptions button:nth-of-type(8):hover{
+        background-color:var(--thema-Cultuur);
+    }
+
+    .filterOptions button:nth-of-type(9).activated,
+    .filterOptions button:nth-of-type(9):hover{
+        background-color:var(--thema-Huisvesting);
+    }
+
+    .filterOptions button:nth-of-type(10).activated,
+    .filterOptions button:nth-of-type(10):hover{
+        background-color:var(--thema-Bestuur);
+        color: var(--background-color);
+    }
+
+    .filterOptions button:nth-of-type(11).activated,
+    .filterOptions button:nth-of-type(11):hover{
+        background-color:var(--thema-Economie);
+        color: var(--background-color);
+    }
+
+    .filterOptions button:nth-of-type(12).activated,
+    .filterOptions button:nth-of-type(12):hover{
+        background-color:var(--thema-Landbouw);
+    }
+
+    .filterOptions button:nth-of-type(13).activated,
+    .filterOptions button:nth-of-type(13):hover{
+        background-color:var(--thema-Onderwijs);
+    }
+
+    .filterOptions button:nth-of-type(14).activated,
+    .filterOptions button:nth-of-type(14):hover{
+        background-color:var(--thema-Infrastructuur);
+    }
+
+    .filterOptions button:nth-of-type(15).activated,
+    .filterOptions button:nth-of-type(15):hover{
+        background-color:var(--thema-Werk);
+        color: var(--background-color);
+    }
+
+    .filterOptions button:nth-of-type(16).activated,
+    .filterOptions button:nth-of-type(16):hover{
+        background-color:var(--thema-openbare-orde);
+    }
+
+
+ /* thema note hover in de index en details pagina */
+
+ .detail-page .detail-block > img + span,
+ main ul li div a:first-of-type img + span{
+     position: absolute;
+     top: -1em;
+     right: 1em;
+     background-color: var(--secondary-color);
+     padding: .2em;
+     border-radius: .3em;
+     box-shadow: var(--grey-color) 0 0 .2em;
+     opacity: 0;
+ }
+ 
+ main ul li div a:first-of-type img + span{
+     top: -1.8em;
+     right: 0;
+     color: var(--font-color);
+ }
+ 
+ .detail-page .detail-block > img:hover + span,
+ main ul li div a:first-of-type img:hover + span{
+     opacity: 1;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ************************************************** */
+/************* main stylen Bolkjes view ************/
+/* ************************************************** */
+.hidden{
+    display: none;
+}
+
+main ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc((100% - 66em) / 2 ); /*3 elements = 66em => 2 gaps*/
+    padding:2em 8em 0;
+    justify-content: flex-start;
+}
+
+    main ul>p{
+        text-align: center;
+    }
+
+main ul li{
+    width: 22em;
+    height: 32em;
+    margin-bottom: 3em;
+    position: relative;
+}
+
+main ul li>img{
+    width: 22em;
+    height: 15em;
+    position:absolute;
+    top: 0;
+
+    overflow: hidden;
+    border-radius: .8em;
+    margin: 0;
+
+    order: 0;
+}
+
+main ul li div{
+    width: 18em;
+    height: 21em;
+    padding: 1em;
+    background-color: var(--background-color);
+    border-radius: .5em;
+    position: relative;
+    top: 10em;
+    left: 2em;
+    z-index: 1;
+    order: 1;
+}
+
+    .Openbareorde-box{
+        box-shadow: var(--thema-openbare-orde) 0 .1em .4em;
+    }
+
+    .Financien-box{
+        box-shadow: var(--thema-Financien) 0 .1em .4em;
+    }
+
+    .Verkeer-box{
+        box-shadow: var(--thema-Verkeer) 0 .1em .4em;
+    }
+
+    .Socialezekerheid-box{
+        box-shadow: var(--thema-Sociale-zekerheid) 0 .1em .4em;
+    }
+
+    .Bestuur-box{
+        box-shadow: var(--thema-Bestuur) 0 .1em .4em;
+    }
+
+    .Onderwijs-box{
+        box-shadow: var(--thema-Onderwijs) 0 .1em .4em;
+    }
+
+main ul li a{
+    text-decoration: none;
+    position: absolute;
+}
+
+main ul li div a:first-of-type{
+    top: 1em;
+    left: 1em;
+    right: 1em;
+}
+
+main ul li div a:first-of-type img{
+    width: 1.2em;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+main ul li div a:first-of-type h3{
+    font-weight: lighter;
+    color: var(--font-color);
+    width: 90%;
+}
+
+main ul li div a:first-of-type h3::after{
+    content: "";
+    display: block;
+    width: 110%;
+    height: .05em;
+    position: relative;
+    bottom: -.4em;
+    background-color: #e2e2e2;
+}
+
+main ul li div>p{
+    line-height: 1.5em;
+    position: relative;
+    top: 4em;
+}
+
+main ul li div a:last-of-type{
+    color: var(--hoofd-color);
+    position: absolute;
+    bottom: 1.5em;
+    left: 1em;
+}
+
+main ul li a:last-of-type:hover{
+    text-decoration: underline;
+}
+
+main ul li div img{
+    width: 3em;
+    position: absolute;
+    bottom: 1em;
+    right: 1.5em;
+}
+
+main > span {
+    position: relative;
+    top: -2.5em;
+    float: right;
+    right: 5em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ************************************************** */
+/************ main stylen table view ***************/
+/* ************************************************** */
+
+table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 2em;
+  }
+
+    main table>p{
+    text-align: center;
+    }
+
+    table tr th {
+        padding-top: 1.1em;
+        padding-bottom: 1.1em;
+        color: var(--hoofd-color);
+        width: 4em;
+    }
+    
+    table tr td {
+        padding: 1.25em 0;
+        font-size: .8em;
+        width: 4em;
+    }
+
+    table tr td a{
+        text-decoration: none;
+        color: var(--font-color);
+    }
+
+    table tr td a:hover{
+        text-decoration: underline;
+    }
+
+    table, th, td {
+        text-align: center;
+    }
+
+    table tr th:last-of-type, table tr td:last-of-type{
+        padding-right: 4%;
+    }
+
+
+
+    table tr td img {
+        width: 9em;
+        height: 5em;
+        border-radius: .5em;
+    }
+
+    table tr td:last-of-type img{
+        width: 2em;
+        height: auto;
+    }
+    
+    table tr:nth-child(even) {
+        background-color: var(--secondary-color);
+    }
+
+    
+/* geen items gevonden na het filteren */
+.no-item{
+    width: 100%;
+    text-align: center;
+    height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+/* ************************************************** */
+/*************** detail-pagina stylen *****************/
+/* ************************************************** */
+.detail-page {
+    padding: 1.2em 4.4em 0 4.4em;
+}
+
+.detail-page .terug-link {
+    font-weight: bold;
+}
+
+.detail-page section:first-of-type{
+    padding: 0;
+}
+.detail-page section:first-of-type a {
+    color: black;
+    text-decoration: none;
+}
+
+.detail-page section:first-of-type div>img:first-of-type{
+    order:2;
+}
+
+.detail-page section:first-of-type div>img.notificationBtn{
+    width: 1.3em;
+    cursor: pointer;
+}
+
+.detail-page section:first-of-type div{
+    width: 8em;
+    min-width: auto;
+    flex-direction: row-reverse;
+}
+
+.detail-page  section:first-of-type div button:first-of-type{
+    width: 2em;
+    height: 2em;
+}
+
+.detail-page  section:first-of-type div input{
+    height: 2em;
+}
+
+.detail-page .detail-container {
+    padding: 0;
+    align-items: flex-end;
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.detail-page .detail-banner {
+    display: inline-block;
+    width: 34.4em;
+    height: 18.8em;
+    margin-top: .9em;
+}
+
+.detail-page .detail-banner img {
+    width: 34.4em;
+    height: 18.8em;
+    object-fit: cover;
+    border-radius: .3em;
+}
+
+.detail-page .detail-block {
+    display: inline-block;
+    margin-top: .9em;
+    width: 34.4em;
+
+    border-radius: .3em;
+    /* height: 18.8em; */
+    box-shadow: var(--licht-grey-color) 0 0 .4em;
+    padding: 1em;
+    background-color: white;
+    position: relative;
+}
+
+
+.detail-page .detail-block h1::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: .05em;
+    position: relative;
+    bottom: -.4em;
+    background-color: #e2e2e2;
+}
+
+.detail-page .detail-block h1 {
+    text-align: left;
+    margin-bottom: 1.2em;
+    font-weight: 100;
+    width: 100%;
+}
+
+.detail-page .detail-block > img{
+    width: 1.5em;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}
+
+.detail-page .detail-block .detail-content {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.3em;
+    width: 100%;
+}
+
+
+.detail-page .detail-block .detail-content li {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.detail-page .detail-content li p {
+    display: inline;
+    position: absolute;
+    left: 7em;
+}
+
+.detail-page .detail-content li ul{
+    width: 28%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+
+    gap: 1em;
+    position: absolute;
+    left: 7em;
+}
+
+.detail-page .detail-content li ul li{
+    width: max-content;
+}
+
+.detail-page .detail-content li ul li a {
+    display: block;
+    width: max-content;
+    position: absolute;
+    background-color: white;
+    padding: .2em .3em;
+    border: .1em solid var(--licht-grey-color);
+    border-radius: .2em;
+    color: var(--font-color);
+}
+
+.detail-page .detail-content li a:hover {
+    text-decoration: none;
+    background-color: var(--grey-color);
+    color: white;
+    transition: 0.2s ease-in;
+}
+
+.detail-page .inhoud-container {
+    margin-top: 5em;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: var(--licht-grey-color) 0 0 .4em;
+    width: 70%;
+    min-width: 30em;
+    border-radius: .3em;
+    display: block;
+    background-color: white;
+    padding: 4.4em;
+}
+
+.detail-page .inhoud-container article {
+    text-align: left;
+}
+
+.detail-page .inhoud-container h2 {
+    font-weight: 100;
+}
+
+/* Tabs */
+
+.detail-page .tabbed {
+    text-align: left;
+    width: 70%;
+    min-width: 30em;
+    padding: 1.2em 0 ;
+    margin-left: auto;
+    margin-right: auto;
+    height: fit-content;
+    position: relative;
+    margin-top: 5em;
+}
+
+.detail-page .tabbed .titels {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: .15em;
+}
+
+.detail-page .tabbed .titels input {
+  display: none;
+}
+
+.detail-page .tabbed .titels button{
+    font-family: 'Noto Sans SC', Helvetica, arial, sans-serif;
+    color: #ffffff;
+    display: block;
+    float: left;
+    padding: 1.2em .6em;
+    width: calc(97% / 5);
+    height: 5em;
+    min-width: min-content;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 0.1em solid var(--hoofd-color);
+    border-radius: 1em 1em 0 0;
+    background: var(--hoofd-color);
+}
+
+.detail-page .tabbed .titels button:hover,
+.detail-page .tabbed .titels button.opentab{
+    background: #ffffff;
+    color: #000000;
+    border: .2em solid var(--hoofd-color);
+    z-index: 2;
+    position: relative;
+}
+
+.detail-page .tabbed .titels button.opentab::after{
+    content: "";
+    display: block;
+    background-color: #ffffff;
+    width: 100%;
+    height: .5em;
+    position: absolute;
+    left: 0em;
+    bottom: -.4em;
+}
+
+.detail-page .tabbed .tabs {
+    clear: both;
+    width: 100%;
+    min-width: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.detail-page .tabbed .tabs > div {
+    width: 100%;
+    position: relative;
+    top: -.16em;
+    border: .19em solid var(--hoofd-color);
+    border-radius: 0 0 1em 1em;
+    line-height: 1.4em;
+    background-color: var(--background-color);
+    display: none;
+    text-align: left;
+    align-content: center;
+    padding: 1.2em 4.4em;
+}
+
+.detail-page .tabbed .tabs div.opentab{
+    display: block;
+    z-index: 1;
+}
+
+
+.detail-page .tabbed .tabs > div > p:first-of-type {
+  color: var(--grey-color);
+  margin-bottom: .5em;
+}
+
+.detail-page .tabbed .tabs > div > p:first-of-type::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: .06em;
+    position: relative;
+    bottom: -.2em;
+    background-color: #e2e2e2;
+  
+}
+
+.detail-page .tabbed .tabs div p a {
+  text-decoration: underline;
+  color: var(--hoofd-color);
+}
+
+/* Dataverwerking */
+.tabs div table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  margin-bottom: 2em;
+}
+
+
+/* contactgegevens */
+
+.contactgegevens {
+    display: block;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5em;
+}
+
+.contactgegevens h2 {
+    font-weight: 100;
+    margin-bottom: 1.2em;
+}
+
+.contactgegevens table tr td {
+    text-align: left;
+    padding: 1.2em;
+}
+
+.contactgegevens table tr td p:first-of-type{
+    font-style: italic;
+}
+
+.contactgegevens table tr td p:last-of-type{
+    margin-top: .3em;
+}
+
+.contactgegevens table tr:nth-child(1) {
+    background-color: white;
+    border-bottom: .1em solid rgb(95, 94, 94);
+    border-top: .1em solid rgb(95, 94, 94);
+}
+
+.contactgegevens table tr:nth-child(3) {
+    background-color: white;
+    border-bottom: .1em solid rgb(95, 94, 94);
+    border-top: .1em solid rgb(95, 94, 94);
+
+
+}
+
+
+
+/* Data */
+.detail-page .tabbed .tabs > div > section{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    row-gap: 2em;
+    padding: 0;
+  }
+  
+  .detail-page .tabbed .tabs > div > section > div{
+    width: 100%;
+    display: block;
+    text-align: left;
+  }
+  
+  .detail-page .tabbed .tabs > div > section > div p:nth-of-type(1){
+      color: var(--font-color);
+      margin-bottom: 0;
+      font-weight:bold;
+  }
+  
+  .detail-page .tabbed .tabs > div > section > div p:nth-of-type(1)::after{
+      display: none;
+  }
+  
+  .detail-page .tabbed .tabs div section div ul{
+    list-style:none;
+    margin:0;
+    margin-top: .5em;
+    padding:0  0 0 2em;
+    gap: 0;
+  
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .detail-page .tabbed .tabs div section div ul li{
+      width: fit-content;
+      height: auto;
+      margin-bottom: 0;
+  }
+  
+  .detail-page .tabbed .tabs div section div ul li::before{
+    content:"- ";
+  }
+  
+  .detail-page .tabbed .tabs > div table tr:first-of-type td {
+    font-weight: bold;
+    color: var(--hoofd-color);
+  }
+  
+  .detail-page .tabbed .tabs > div table tr td {
+    padding: 1em;
+  }
+  
+  .detail-page .tabbed .tabs > div table tr td a {
+    color: var(--hoofd-color);
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .detail-page .tabbed .tabs > div table tr:nth-child(even) {
+    background-color: var(--secondary-color);
+  }
+  
+
+
+
+
+
+
+
+/* feedback form */
+
+.feedback {
+    display: block;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    margin-top: 5em;
+}
+
+.feedback h3 {
+    font-weight: 100;
+}
+
+.feedback p{
+    margin-top: .5em;
+}
+
+.feedback button {
+    padding: .6em;
+    background-color: white;
+    box-shadow: var(--licht-grey-color) 0 0 .2em .1em;
+    border: none;
+    border-radius: .2em;
+    cursor: pointer;
+    margin-right: 1.2em;
+    margin-top: 1.2em;
+    width: 12em;
+    height: 3.5em;
+    font-size: 1em;
+    text-align: left;
+}
+
+.feedback button:hover {
+    background-color: rgb(212, 212, 212);
+}
+
+
+/* Thema's subjects icon classen */
+
+.Openbareorde{
+    background-image: url(images/icons/Openbareorde.icon.svg);
+}
+
+.Financien{
+    background-image: url(images/icons/Financien-icon.svg);
+}
+
+.Verkeer{
+    background-image: url(images/icons/Verkeer-icon.svg);
+}
+
+.Socialezekerheid{
+    background-image: url(images/icons/Socialezekerheid.icon.svg);
+}
+
+.Bestuur{
+    background-image: url(images/icons/Bestuur.icon.svg);
+}
+
+.Onderwijs{
+    background-image: url(images/icons/Onderwijs.icon.svg);
+}
+
+
+/* subjects */
+.detail-page .subjects {
+    display: block;
+    margin: 5em auto;
+    width: 70%;
+    align-items: flex-start;
+}
+
+.detail-page .subjects h4 {
+    font-weight: 100;
+    text-align: left;
+}
+
+.detail-page .subjects ul{
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0;
+    margin-top: 1.5em;
+    gap: 2.5em;
+}
+
+.detail-page ul .subject-container {
+    width: 28.5em;
+    height: 11em;
+    display: flex;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.detail-page ul .subject-container img {
+    display: block;
+    width: 25em;
+    height: 8em;
+    border-radius: .6em;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+.detail-page ul .subject-container .subject-content {
+    min-width:auto;
+    text-align: left;
+    width: 28em;
+    height: 9em;
+
+    position:relative;
+    right: 0;
+    top: 0;
+    left: 0;
+
+    display: inline-block;
+    text-align: left;
+    padding-left: 1em;
+
+    background-color: transparent;
+}
+
+.detail-page .subject-container .subject-content p {
+    margin-top: .6em;
+    color: var(--grey-color);
+    position: relative;
+    top: 0;
+}
+
+.detail-page .subject-container .subject-content h5 {
+    width: 100%;
+    font-size: 1.2em;
+    font-weight: lighter;
+    background-size: .9em;
+    background-position-x: right;
+    background-repeat: no-repeat;
+    background-position-y: top;
+}
+
+.detail-page .subject-container .subject-content h5::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: .01em;
+    background-color: #676968;
+    position: relative;
+    bottom: -.3em;
+}
+
+.detail-page .subject-container:last-of-type .subject-content h5{
+    background-size: 1.3em;
+}
+
+.detail-page .subject-container .subject-content > a {
+    font-size: 1.1em;
+    color: var(--hoofd-color);
+    position:relative;
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+}
+
+
+ /* Popup */
+#notificationBtn:hover {
+    cursor: pointer;
+}
+
+.pop-up {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 6.2em; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  .popUp-content {
+    background-color: #fefefe;
+    margin: auto;
+
+    position: relative;
+
+    padding: 5% 5% 2%;
+    width: 50%;
+    border-radius: .6em;
+  }
+
+  .popUp-content h5 {
+    font-size: 1.1em;
+    margin-bottom: .9em;
+    font-weight: 100;
+  }
+
+  .popUp-content input {
+    margin-bottom: .9em;
+    margin-right: 1em;
+  }
+
+  .popUp-content form {
+    display: flex;
+    flex-direction: column;
+    padding: 12% 0 5%;
+   
+    justify-content: center;
+  }
+
+  .popUp-content label {
+    font-size: .9em;
+  }
+
+  .popUp-content form label {
+    float: left;
+  }
+
+  .popUp-content form input {
+    background-color: var(--licht-grey-color);
+    padding: 1em;
+    border: none;
+    border-radius: .3em;
+    margin-top: .6em;
+    width: 100%;
+  }
+
+
+  .popUp-content.gelukt{
+      text-align: center;
+
+      margin: auto;
+      padding: 5% 5% 2%;
+      width: 50%;
+
+      height: 66%;
+      border-radius: .6em;
+  }
+
+  .popUp-content.gelukt h5{
+      font-weight: bold;
+  }
+  .popUp-content.gelukt p{
+      margin: 2em 0 0 0 ;
+  }
+
+  .popUp-content.gelukt button{
+      position: relative;
+      bottom: -14.5em ;
+
+  }
+  
+  /* The Close Button */
+  .close {
+    color: var(--font-color);
+    font-size: 1.7em;
+    font-weight: bold;
+
+    position: absolute;
+    top: 1em;
+    right: 1em;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .popUp-content div {
+      display: flex;
+      justify-content: center;
+  }
+
+  .gereed {
+    border: none;
+    background-color: var(--hoofd-color);
+    padding: .6em;
+    width: 11.2em;
+    color: white;
+    border-radius: .3em;
+    margin: 0 auto;
+  }
+
+  .gereed:hover {
+    cursor: pointer;
+    background-color: #1f335a;
+  }
+
+
+
+main.detail-page + footer{
+      position: relative;
+  }
+
+
+
+
+/* ************************************************** */
+/******************* Chatbot stylen *******************/
+/* ************************************************** */
+
+    /* Chatbot icon */
+.chatbot{
+    background-color: transparent;
+    border: none;
+    transform: scale(.6);
+    transition: .5s;
+
+
+    position: fixed;
+    bottom: .3em;
+    right: 0;
+    z-index: 100;
+    cursor: pointer;
+}
+
+    .chatbot:hover{
+        transform: scale(.7);
+        filter: drop-shadow(.3em .3em 0 var(--licht-grey-color) );
+        transition: .2s;
+    }
+
+    .chatbot.openchat{
+        transform: scale(.4);
+    }
+
+    .chatbot.openchat:hover{
+        transform: scale(.5);
+    }
+
+
+
+    /* Open chatbot */
+main section.chatbot-box{
+    width: 29em;
+    height: 35em;
+    border-radius: 2em 2em 0 2em;
+    position: fixed;
+    right: 3em;
+    bottom: 3em;
+
+    transform: scale(0);
+    transform-origin: bottom right;
+    transition: .5s;
+    background-color: var(--background-color);
+    box-shadow: var(--licht-grey-color) 0 .15em .2em ;
+
+    overflow: hidden;
+}
+
+section.chatbot-box.openchat{
+    transform: scale(1);
+}
+
+    main section.chatbot-box,
+    main section.chatbot-box p,
+    main section.chatbot-box ul,
+    main section.chatbot-box ul li,
+    main section.chatbot-box button{
+        margin: 0;
+        padding: 0;
+        z-index: 99;
+    }
+
+    main section.chatbot-box>p:first-of-type{
+        color: var(--background-color);
+        background-color: var(--hoofd-color);
+        font-weight: bold;
+        position: absolute;
+
+        padding: 1em;
+        text-align: left;
+
+        width: 100%;
+        height: 3em;
+        border-radius: 2em 2em 0 0;
+
+    }
+        main section.chatbot-box>p:first-of-type::after{
+            content: ">";
+            display: inline-block;
+            position: absolute;
+            right: 2em;
+            transform: rotate(-90deg);
+            transition: .6s;
+
+            cursor: pointer;
+        }
+
+            main section.chatbot-box>p.closelist::after{
+                transform: rotate(90deg);
+            }
+
+        main section.chatbot-box p:nth-of-type(2){
+            max-width: 20em;
+            padding: .5em 1em ;
+            font-size: .8em;
+            background-color: var(--licht-grey-color);
+            border-radius: .7em .7em .7em .2em;
+            position: absolute;
+            bottom: 7em;
+            left: 1em;
+        }
+
+        main section.chatbot-box p:nth-of-type(3){
+            font-size: .6em;
+            color: var(--grey-color);
+            position: absolute;
+            bottom: 8em;
+            left: 2em;
+        }
+
+    /* De vragen list */
+main section.chatbot-box dl{
+    width: 100%;
+    position: absolute;
+    top: 3em;
+    list-style: none;
+    gap: 0;
+    box-shadow: var(--licht-grey-color) 0 .15em .2em ;
+    background-color: var(--background-color);
+    transform: scaleY(1);
+    z-index: 99;
+}
+
+    main section.chatbot-box dl.closelist{
+        transform: scaleY(0);
+        transform-origin: top;
+    }
+
+    main section.chatbot-box dl dt,
+    main section.chatbot-box dl dd{
+        width: 100%;
+        font-size: .8em;
+        padding: 1em 2em 1em 1em;
+        text-align: left;
+    }
+
+    main section.chatbot-box dl dd:nth-of-type(2n+1),
+    main section.chatbot-box dl dt:nth-of-type(2n+1){
+        background-color: var(--secondary-color);
+    }
+
+    main section.chatbot-box dl dt::after{
+        content: ">";
+        display: inline-block;
+        position: absolute;
+        right: 2.5em;
+        transform: rotate(90deg);
+        transition: .6s;
+
+        cursor: pointer;
+    }
+
+    main section.chatbot-box dl dt.closedslid{
+        padding-bottom: .5em;
+    }
+
+    main section.chatbot-box dl dt.closedslid::after{
+        transform: rotate(-90deg);
+    }
+
+    main section.chatbot-box dl dd{
+        padding: 0 1.5em 1em 2em;
+
+    }
+
+    main section.chatbot-box dl dd.closedslid{
+        clip: rect(0 0 0 0);
+        position: absolute;
+        white-space: nowrap;
+    }
+
+
+
+    /* input position */
+main section.chatbot-box div{
+    width: 100%;
+    height: 3em;
+    border-radius: 0 0 0 1.5em;
+    position: absolute;
+    bottom: 0;
+    background-color: var(--background-color);
+    z-index:99;
+}
+
+    main section.chatbot-box div::after{
+        content: "";
+        display: block;
+        height: .07em;
+        width: 93%;
+        background-color: #e2e2e2;
+        position: absolute;
+        top: 0;
+        left: 1em;
+    }
+
+    main section.chatbot-box div button{
+        background-color: transparent;
+
+        border-top: 1.5em solid transparent;
+        border-left: 2.5em solid var(--hoofd-color);
+        border-bottom: 1.5em solid transparent;
+        transform: scale(.7);
+
+        position: relative;
+        right: 1em;
+    }
+
+    main section.chatbot-box div button:hover{
+        transform: scale(.8);
+    }
+
+    main section.chatbot-box div input{
+        background-color: var(--hoofd-color);
+        width: 87%;
+        height: 2em ;
+
+        position: relative;
+        left: 1em;
+        border: none;
+        border-radius: .5em ;
+        opacity: 1;
+    }
+
+    main section.chatbot-box div input[type="text"] ,
+    main section.chatbot-box div input::placeholder {
+        color: var(--background-color);
+        padding: 0 1em;
+    }
+
